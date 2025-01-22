@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+.video-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.video-wrapper {
+    display: flex;
+    position: relative;
+    width: 1200px; /* Total width: 3x */
+    overflow: hidden;
+}
+
+.video {
+    width: 400px; /* Each video takes 1/3 of the total width */
+    height: 225px; /* Adjust based on aspect ratio */
+    object-fit: cover;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#prev-btn {
+    left: -50px;
+}
+
+#next-btn {
+    right: -50px;
+}
