@@ -191,7 +191,7 @@
   <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Pipeline of Ag2x2</h2>
-        <img src="static/images/model.png" width=750 alt="model">
+        <img src="static/images/model.png" width=900 alt="model">
       </div>
   </div>
 </section>
@@ -227,7 +227,7 @@
 
         <!-- Video container -->
         <div class="video-container has-text-centered">
-          <video id="task-video" autoplay muted loop controls playsinline style="max-width: 100%;">
+          <video id="task-video" autoplay muted loop controls playsinline style="max-width: 50%; margin-top: 2rem; margin-bottom: -0.5rem;">
             <source src="static/videos/a.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -237,20 +237,75 @@
   </div>
 </section>
 
+<section class="section" style="padding-top: 0rem; padding-bottom: 1rem;">
+  <div class="container is-max-desktop">
+    <div style="max-width: 850px; margin: 0 auto;">
+      <div class="table-container">
+        <p class="subtitle is-5 has-text-centered" style="margin-bottom: 0.75rem;">
+          Comparison and Ablation Results
+        </p>
+        <table class="table is-bordered is-fullwidth is-size-7 has-text-centered">
+          <thead>
+            <tr>
+              <th rowspan="2">Method</th>
+              <th colspan="7" style="background-color: #f5f5f5;">Bi-DexHands</th>
+              <th></th>
+              <th colspan="8" style="background-color: #f5f5f5;">PerAct<sup>2</sup></th>
+              <th rowspan="2">Overall</th>
+            </tr>
+            <tr>
+              <th>(a)</th><th>(b)</th><th>(c)</th><th>(d)</th><th>(e)</th><th>(f)</th><th>Avg.</th>
+              <th></th>
+              <th>(g)</th><th>(h)</th><th>(i)</th><th>(j)</th><th>(k)</th><th>(l)</th><th>(m)</th><th>Avg.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Eureka</th><td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>5</td><td>14.8%</td><td></td><td>0</td><td>1</td><td>0</td><td>0</td><td>7</td><td>2</td><td>0</td><td>15.9%</td><td>15.4%</td></tr>
+            <tr><th>R3M</th><td>0</td><td>0</td><td>3</td><td>0</td><td>1</td><td>0</td><td>7.4%</td><td></td><td>2</td><td>0</td><td><u>4</u></td><td>2</td><td>3</td><td><u>3</u></td><td>0</td><td>22.2%</td><td>15.4%</td></tr>
+            <tr><th>VIP</th><td>1</td><td>3</td><td>1</td><td>7</td><td>2</td><td>0</td><td>25.9%</td><td></td><td>0</td><td>0</td><td><u>4</u></td><td><u>5</u></td><td>5</td><td><u>3</u></td><td>0</td><td>27.0%</td><td>26.5%</td></tr>
+            <tr><th>Ag2Manip</th><td>6</td><td><b>9</b></td><td><u>7</u></td><td>4</td><td>3</td><td><u>7</u></td><td>66.7%</td><td></td><td>2</td><td>3</td><td>3</td><td>3</td><td><b>9</b></td><td><b>6</b></td><td>4</td><td>47.6%</td><td>56.4%</td></tr>
+            <tr><th>Expert Reward</th><td><b>8</b></td><td><b>9</b></td><td>6</td><td>6</td><td><b>8</b></td><td><b>9</b></td><td><b>85.2%</b></td><td></td><td><u>5</u></td><td>0</td><td><b>6</b></td><td>3</td><td>5</td><td><u>3</u></td><td><b>6</b></td><td>44.4%</td><td><u>63.2%</u></td></tr>
+            <tr><th><i>Ours (w/o hands)</i></th><td>7</td><td>4</td><td><u>7</u></td><td><u>7</u></td><td>4</td><td><b>9</b></td><td><u>70.4%</u></td><td></td><td><u>5</u></td><td><u>4</u></td><td>3</td><td><u>5</u></td><td><u>8</u></td><td><u>3</u></td><td>3</td><td><u>46.0%</u></td><td>57.3%</td></tr>
+            <tr><th><b>Ours (full)</b></th><td><u>7</u></td><td><u>6</u></td><td><b>9</b></td><td><b>8</b></td><td><u>7</u></td><td><b>9</b></td><td><b>85.2%</b></td><td></td><td><b>6</b></td><td><b>5</b></td><td>2</td><td><b>7</b></td><td><b>9</b></td><td><b>6</b></td><td><u>5</u></td><td><b>63.5%</b></td><td><b>73.5%</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- TODO: arXiv bib>
+
+
+<section class="section has-text-centered">
+  <div class="container">
+    <h2 class="title is-3">Imitation Learning Results</h2>
+    <div class="video-container">
+      <video autoplay muted loop controls playsinline
+             style="max-width: 85%; margin-top: 0.1rem;">
+        <source src="static/videos/imitation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
+  <div class="container is-max-desktop content" style="max-width: 850px; margin: 0 auto;">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {CORR},
-  year      = {2025},
+    <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 6px; font-size: 0.85rem;">
+<code>@article{TODO2025ag2x2,
+  author  = {TODO: Author list},
+  title   = {TODO: Title of the paper},
+  journal = {TODO: Conference or Journal},
+  year    = {2025},
 }</code></pre>
   </div>
 </section>
-</-->
+
+
+
+
 
 <footer class="footer">
   <div class="container">
